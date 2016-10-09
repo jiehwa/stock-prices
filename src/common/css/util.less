@@ -1,0 +1,251 @@
+@orangeColor: #ff6633;
+@greenColor: #06c1ae;
+@borderColor: #d7d7d7;
+@whiteColor: #fff;
+@mainFontColor: #333;
+@secondaryFontColor: #555;
+@thirdFontColor: #999;
+
+.Hide {
+  display: none !important;
+}
+
+.hide {
+  display: none;
+}
+
+.Hidden {
+  overflow: hidden;
+}
+
+.rel() {
+  position: relative;
+}
+
+.border-box() {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.flexbox() {
+  display: flex;
+}
+
+.boxflex(@value:1) {
+  -webkit-box-flex: @value;
+  -ms-box-flex: @value;
+  -ms-flex: @value;
+  box-flex: @value;
+}
+
+.rotate(@degrees) {
+  -webkit-transform: rotate(@degrees);
+  -moz-transform: rotate(@degrees);
+  -ms-transform: rotate(@degrees);
+  -o-transform: rotate(@degrees);
+  transform: rotate(@degrees);
+}
+
+.scale(@ratio) {
+  -webkit-transform: scale(@ratio);
+  -moz-transform: scale(@ratio);
+  -ms-transform: scale(@ratio);
+  -o-transform: scale(@ratio);
+  transform: scale(@ratio);
+}
+
+.translate(@x, @y) {
+  -webkit-transform: translate(@x, @y);
+  -moz-transform: translate(@x, @y);
+  -ms-transform: translate(@x, @y);
+  -o-transform: translate(@x, @y);
+  transform: translate(@x, @y);
+}
+
+.box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
+  -webkit-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+
+.box-sizing(@box-model) {
+  -webkit-box-sizing: @box-model; // Safari <= 5
+  -moz-box-sizing: @box-model; // Firefox <= 19
+  box-sizing: @box-model;
+}
+
+.radius(@r) {
+  border-radius: @arguments;
+  -webkit-border-radius: @arguments;
+}
+
+.transform-origin(@x:0,@y:0) {
+  -webkit-transform-origin: @x @y;
+  -moz-transform-origin: @x @y;
+  -ms-transform-origin: @x @y;
+  -o-transform-origin: @x @y;
+  transform-origin: @x @y;
+}
+
+.retina-border(@border:border, @color:#d7d7d7, @position:relative) {
+  position: @position;
+  &:before {
+    content: '';
+    .scale(0.5);
+    .transform-origin();
+      @{border}: 1px solid @color;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    .box-sizing(border-box);
+    z-index: 2;
+  }
+}
+
+.size(@width, @height) {
+  width: @width;
+  height: @height;
+}
+
+.square(@size) {
+  .size(@size, @size);
+}
+
+.circle(@width) {
+  .radius(@width/2);
+  .size(@width, @width);
+}
+
+.multi-line(@value) {
+  display: box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  line-clamp: @value;
+  box-orient: vertical;
+  -ms-line-clamp: @value;
+  -ms-box-orient: vertical;
+  -webkit-line-clamp: @value;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.transition(@property,@duration:0.2s,@timing-function:ease-out,@delay:0s) {
+  transition: @property @duration @timing-function @delay;
+  webkit-transition: @property @duration @timing-function @delay;
+  -o-transition: @property @duration @timing-function @delay;
+  -moz-transition: @property @duration @timing-function @delay;
+}
+
+.line(@height) {
+  height: unit(@height, px);
+  line-height: unit(@height, px);
+}
+
+.arrow(@deg:-45deg,@width:2px,@color:#bab5ad) {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  border-right: @width solid @color;
+  border-bottom: @width solid @color;
+  .rotate(@deg);
+}
+
+.arrow2(@deg:-45deg,@width:2px,@color:#bab5ad) {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  border-right: @width solid @color;
+  border-bottom: @width solid @color;
+  .rotate(@deg);
+}
+
+.clearfix() {
+  &:before {
+    content: '';
+    display: block;
+  }
+  &:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+  }
+}
+
+.elli() {
+  white-space: nowrap;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.shadow() {
+  background: -webkit-gradient(linear, left top, left bottom,
+  color-stop(0%, rgba(0, 0, 0, 0)),
+  color-stop(60%, rgba(0, 0, 0, 0.2)),
+  color-stop(90%, rgba(0, 0, 0, 0.6)),
+  color-stop(100%, rgba(0, 0, 0, 0.8))
+  );
+}
+
+.vc-align(@value) {
+  .flexbox();
+  align-items: @value;
+}
+
+.img-font() {
+  font-size: 0;
+  line-height: 0;
+}
+
+.abs(@top,@left) {
+  position: absolute;
+  top: @top;
+  left: @left;
+}
+
+.mt-5 {
+  margin-top: 5px;
+}
+.close-btn(@height:1.8rem,@width:1.8rem,@top:0,@right:0){
+  height: @height;
+  width: @width;
+  position: absolute;
+  top:@top;
+  right: @right;
+  background-image: url("./close.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/*声明 WebFont*/
+//@font-face {
+//  font-family: 'DINPro';
+//  src: url('./DINPro-Bold.otf');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 4rem 0
+  }
+
+  to {
+    background-position: 0 0
+  }
+}
+
+/*闹钟旋转倒计时*/
+@keyframes clock-timing {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

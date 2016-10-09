@@ -1,0 +1,144 @@
+@iphone4: 53.33%; //62.5%;//320px
+@galaxyS4: 60%; //360px
+@iphone5: 53.33%; //320px
+@iphone6: 62.5%; //73.24%;//375px base 10px
+@iphone6p: 69%; //414px
+
+html {
+  font-size: @iphone4;
+}
+
+@media (max-width: 359px) {
+  html {
+    font-size: @iphone5
+  }
+}
+
+@media (min-width: 360px) and (max-width: 409px) {
+  html {
+    font-size: @iphone6
+  }
+}
+
+@media (min-width: 410px){
+  html{
+    font-size: @iphone6p
+  }
+}
+
+@media (device-height: 480px) and (min-resolution: 2dppx) {
+  /* 兼容iphone4/4s  w:320*/
+  html {
+    font-size: @iphone4;
+  }
+
+}
+
+@media (device-height: 640px) and (min-resolution: 3dppx) {
+  /* 360x640 galaxy s4 */
+  html {
+    font-size: @galaxyS4;
+  }
+
+}
+
+@media (device-height: 568px) and (min-resolution: 2dppx) {
+  /* 兼容iphone5 */
+  html {
+    font-size: @iphone5;
+  }
+
+}
+
+@media (device-height: 667px) and (min-resolution: 2dppx) {
+  /* 兼容iphone6  w:375*/
+  html {
+    font-size: @iphone6;
+  }
+
+}
+
+@media (device-height: 736px) and (min-resolution: 3dppx) {
+  /* 兼容iphone6 Plus  w:414*/
+  html {
+    font-size: @iphone6p;
+  }
+}
+
+@media (device-height: 480px) and (min--moz-device-pixel-ratio: 2) {
+  /* 兼容iphone4/4s  w:320*/
+  html {
+    font-size: @iphone4;
+  }
+
+}
+
+@media (device-height: 640px) and (min--moz-device-pixel-ratio: 3) {
+  /* 360x640 galaxy s4 */
+  html {
+    font-size: @galaxyS4;
+  }
+
+}
+
+@media (device-height: 568px) and (min--moz-device-pixel-ratio: 2) {
+  /* 兼容iphone5 */
+  html {
+    font-size: @iphone5;
+  }
+
+}
+
+@media (device-height: 667px) and (min--moz-device-pixel-ratio: 2) {
+  /* 兼容iphone6  w:375*/
+  html {
+    font-size: @iphone6;
+  }
+
+}
+
+@media (device-height: 736px) and (min--moz-device-pixel-ratio: 3) {
+  /* 兼容iphone6 Plus  w:414*/
+  html {
+    font-size: @iphone6p;
+  }
+}
+
+@media (device-height: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  /* 兼容iphone4/4s  w:320*/
+  html {
+    font-size: @iphone4;
+  }
+
+}
+
+@media (device-height: 640px) and (-webkit-min-device-pixel-ratio: 3) {
+  /* 360x640 galaxy s4 */
+  html {
+    font-size: @galaxyS4;
+  }
+
+}
+
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  /* 兼容iphone5 w:320px */
+  html {
+    font-size: @iphone5;
+  }
+
+}
+
+@media (device-height: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  /* 兼容iphone6  w:375*/
+  html {
+    font-size: @iphone6;
+  }
+
+}
+
+@media (device-height: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  /* 兼容iphone6 Plus  w:414*/
+  html {
+    font-size: @iphone6p;
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "name": "stock-prices",
+  "version": "0.1.0",
+  "description": "peon f2e project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jiehwa/stock-prices.git"
+  },
+  "author": {
+    "name": "jiehwa",
+    "email": "jiehwa@qq.com"
+  },
+  "keywords": [
+    "peon-static"
+  ],
+  "dependencies": {
+    "babel-plugin-transform-object-assign": "^6.8.0",
+    "material-ui": "^0.16.0",
+    "normalize.css": "^4.2.0",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-lazyload": "^2.1.5",
+    "react-redux": "^4.4.5",
+    "react-tap-event-plugin": "^1.0.0",
+    "redux": "^3.5.2",
+    "reqwest": "^2.0.5",
+    "rlu": "^1.0.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "cortex-recombiner-webpack-plugin": "^1.0.1",
+    "css-loader": "^0.23.1",
+    "del": "^2.0.2",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "gulp": "^3.9.0",
+    "internal-ip": "^1.2.0",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.2",
+    "open": "0.0.5",
+    "postcss-initial": "^1.5.1",
+    "postcss-loader": "^0.8.0",
+    "redux-devtools": "^3.3.1",
+    "run-sequence": "^1.1.5",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-shell-plugin": "^0.4.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "bugs": {
+    "url": "http:///issues"
+  },
+  "homepage": "http://",
+  "license": "Apache-2.0"
+}
